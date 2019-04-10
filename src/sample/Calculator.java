@@ -1,5 +1,7 @@
 package sample;
 
+import java.lang.Math;
+
 public class Calculator {
     private double a, b, c;
     private String x;
@@ -8,6 +10,7 @@ public class Calculator {
         this.b = b;
     }
 
+
     public String Plus(){
         c = a + b;
         return x = "=" + c;
@@ -15,6 +18,22 @@ public class Calculator {
 
     public String Minus(){
         c = a - b;
+        return x = "=" + c;
+    }
+
+    public String Root(){
+        c = Math.sqrt(a);
+        return x = "=" + c;
+    }
+
+    public String Square(int pok){
+        c = Math.pow(a, pok);
+        if (b > 0)x = "=" + c;
+        return x;
+    }
+
+    public String Average(){
+        c = (a+b)/2;
         return x = "=" + c;
     }
 
